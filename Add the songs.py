@@ -1,5 +1,4 @@
 import requests
-import API_info
 import csv
 import spotipy
 from spotipy.oauth2 import SpotifyOAuth
@@ -17,7 +16,7 @@ def getToken(id, secret):
     access_token = response.json()['access_token']
     return access_token
 
-token = getToken(API_info.clientID, API_info.clientSecret)
+token = getToken(clientID, clientSecret)
 
 def readSongCSV(filePath):
     songs = []
